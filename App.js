@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -24,11 +25,21 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import { px2dp, onePix } from './utils';
+
+const onAgreeDlgPressed = () => {
+
+}
+
+const onProtocalDlgPressed = () => {
+
+}
+
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView style={styles.container}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
@@ -38,35 +49,17 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
         </ScrollView>
+        <View style={styles.body}>
+          <TouchableOpacity style={styles.button}
+            onPresss={onProtocalDlgPressed}>
+            <Text style={styles.buttonText}>Show ProtocalDialogOnly</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}
+            onPresss={onAgreeDlgPressed}>
+            <Text style={styles.buttonText}>Show AgreeDialog</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </>
   );
@@ -80,8 +73,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
   },
+  container: {
+    flex: 1
+  },
   body: {
-    backgroundColor: Colors.white,
+    justifyContent: 'flex-end',
+    alignContent: 'center',
   },
   sectionContainer: {
     marginTop: 32,
@@ -109,6 +106,21 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  button: {
+    padding: px2dp(20),
+    margin: px2dp(15),
+    backgroundColor: '#3399ff',
+    borderWidth: onePix,
+    elevation: 5,
+    shadowOffset: { width: 2, height: 4 },
+    shadowOpacity: 0.3,
+    shadowColor: '#000000',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: px2dp(20),
+    textAlign: 'center'
+  }
 });
 
 export default App;
