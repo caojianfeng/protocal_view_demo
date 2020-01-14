@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-exit-app": "^1.1.0",
+    "react-native-modalbox": "^2.0.0",
+    "react-native-webview": "^8.0.3",
+    "react-native-protocal-view": "1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

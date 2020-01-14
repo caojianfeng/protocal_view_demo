@@ -19,21 +19,11 @@ import {
 
 import {
   Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { px2dp, onePix } from './utils';
+import ProtocalViewDlg from './dlg';
 
-const onAgreeDlgPressed = () => {
-
-}
-
-const onProtocalDlgPressed = () => {
-
-}
 
 const App: () => React$Node = () => {
   return (
@@ -50,17 +40,9 @@ const App: () => React$Node = () => {
             </View>
           )}
         </ScrollView>
-        <View style={styles.body}>
-          <TouchableOpacity style={styles.button}
-            onPresss={onProtocalDlgPressed}>
-            <Text style={styles.buttonText}>Show ProtocalDialogOnly</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}
-            onPresss={onAgreeDlgPressed}>
-            <Text style={styles.buttonText}>Show AgreeDialog</Text>
-          </TouchableOpacity>
-        </View>
+        <ProtocalViewDlg />
       </SafeAreaView>
+
     </>
   );
 };
@@ -75,51 +57,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1
-  },
-  body: {
-    justifyContent: 'flex-end',
-    alignContent: 'center',
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-  button: {
-    padding: px2dp(20),
-    margin: px2dp(15),
-    backgroundColor: '#3399ff',
-    borderWidth: onePix,
-    elevation: 5,
-    shadowOffset: { width: 2, height: 4 },
-    shadowOpacity: 0.3,
-    shadowColor: '#000000',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: px2dp(20),
-    textAlign: 'center'
   }
 });
 
