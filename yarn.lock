@@ -5049,6 +5049,11 @@ react-native-modalbox@^2.0.0:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-protocal-view@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-protocal-view/-/react-native-protocal-view-1.0.1.tgz#b8b5e2cacd0d19a4ceb7c319392b4cde7329739f"
+  integrity sha512-wAqKoWH2OVN6IvDrAkyrzYjsuKpEbVWO2rD/+2nyjfGe82E+8eoPj6bBvr0D7qWHYRD6bdTHzDs9vxdby9tp0Q==
+
 react-native-webview@^8.0.3:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-8.0.3.tgz#1dcd30de28aa4bdb314b4fa8a60e0abc2431a9d4"
@@ -6417,9 +6422,9 @@ xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
